@@ -1,8 +1,8 @@
-import { Mreact } from 'mreact';
-import { HelloMreact } from './HelloMreact/HelloMreact';
+import * as React from 'mreact'; // Alias for JSX transpiler.
+import * as Mreact from 'mreact';
+import HelloMreact from './HelloMreact/HelloMreact';
 
-export class App extends Mreact.Component {
-
+export default class App extends Mreact.Component {
   render(): Mreact.MreactNode {
     return <HelloMreact />
   }

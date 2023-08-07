@@ -1,6 +1,5 @@
+import * as React from 'mreact'; // Alias for JSX transpiler.
 import { createRoot } from 'mreact';
-import { App } from './App';
+import App from './App';
 
-const container = document.getElementById('root');
-const root = createRoot(container);
-root.render(<App />);
+createRoot(document.getElementById('root')).render(<App />);

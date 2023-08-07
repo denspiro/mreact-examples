@@ -10,13 +10,19 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js|jsx|ts|tsx)$/,
         exclude: /node_modules/,
-        use: ['babel-loader'],
-      },
-      {
-        test: /\.(ts|tsx)$/,
-        loader: 'ts-loader',
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                ['@babel/preset-Mreact', { runtime: 'classic' }],
+              ]
+            }
+          },
+          'ts-loader',
+        ],
       },
       {
         test: /\.less$/,
